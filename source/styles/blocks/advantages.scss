@@ -1,0 +1,20 @@
+.advantages {
+
+}
+
+.advantages__title {
+  @include title();
+  line-height: 40px;
+}
+
+.advantages__list {
+
+}
+
+.advantages__item {
+
+}
+
+.advantages__description {
+  color: $color-grey-700;
+}

@@ -1,0 +1,59 @@
+.product-card {
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-grey-700;
+}
+
+.product-card__image-link {
+
+}
+
+.product-card__image {
+
+}
+
+.product-card__info {
+
+}
+
+.product-card__title {
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-grey-900;
+
+  &--more {
+    color: $color-grey-950;
+  }
+}
+
+.product-card__title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card__specs {
+
+}
+
+.product-card__item {
+
+}
+
+.product-card__term {
+
+}
+
+.product-card__value {
+
+}
+
+.product-card__button {
+
+}
+
+.product-card__description {
+
+}

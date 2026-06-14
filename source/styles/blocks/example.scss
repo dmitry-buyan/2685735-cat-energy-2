@@ -1,0 +1,32 @@
+.example {
+  background-color: $color-grey-200;
+}
+
+.example__body {
+
+}
+
+.example__title {
+  @include title();
+  line-height: 40px;
+}
+
+.example__description {
+  color: $color-grey-700;
+}
+
+.example__stats {
+
+}
+
+.example__stats-charges {
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example__slider {
+
+}
