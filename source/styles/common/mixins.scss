@@ -12,10 +12,3 @@
     font-display: swap;
   }
 }
-
-@mixin title() {
-  font-family: $font-secondary;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-}

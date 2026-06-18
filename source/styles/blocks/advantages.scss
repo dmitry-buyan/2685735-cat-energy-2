@@ -3,7 +3,6 @@
 }
 
 .advantages__title {
-  @include title();
   line-height: 40px;
 }
 
@@ -16,5 +15,6 @@
 }
 
 .advantages__description {
-  color: $color-grey-700;
+  margin: 0;
+  color: $color-text-primary;
 }

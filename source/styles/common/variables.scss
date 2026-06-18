@@ -4,13 +4,18 @@ $font-secondary: "Oswald", "Arial", sans-serif;
 $color-white: #ffffff;
 $color-black: #000000;
 
-$color-green-500: #68b738;
-$color-green-600: #5eaa2f;
+$color-green-basic: #68b738;
+$color-green-alternate: #5eaa2f;
 
-$color-grey-100: #f2f2f2;
-$color-grey-200: #eaeaea;
-$color-grey-700: #444444;
-$color-grey-900: #222222;
-$color-grey-950: #111111;
+$color-text-primary: #444444;
+$color-text-secondary: #222222;
+$color-text-accent: #111111;
+
+$color-background: #f2f2f2;
+$color-background-alternate: #eaeaea;
 
 $color-error: #ff8282;
+
+$border-main: 1px solid #d9d9d9;
+$border-card: 1px solid #ebebeb;
+$border-input: 1px solid #e7e7e7;

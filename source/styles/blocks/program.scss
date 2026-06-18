@@ -1,18 +1,17 @@
 .program {
-  background-color: $color-grey-100;
+  background-color: $color-background;
 }
 
 .program__title {
-  font-family: $font-secondary;
   font-size: 24px;
   line-height: 37px;
-  font-weight: 400;
   text-transform: uppercase;
 }
 
 .program__content {
+  margin: 0;
   font-family: $font-primary;
-  color: $color-grey-700;
+  color: $color-text-primary;
 }
 
 .program__link {

@@ -1,5 +1,5 @@
 .example {
-  background-color: $color-grey-200;
+  background-color: $color-background-alternate;
 }
 
 .example__body {
@@ -7,19 +7,20 @@
 }
 
 .example__title {
-  @include title();
   line-height: 40px;
 }
 
 .example__description {
-  color: $color-grey-700;
+  margin: 0;
+  color: $color-text-primary;
 }
 
 .example__stats {
-
+  margin: 0;
 }
 
 .example__stats-charges {
+  margin: 0;
   font-family: $font-secondary;
   font-size: 14px;
   line-height: 20px;

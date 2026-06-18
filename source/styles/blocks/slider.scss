@@ -8,6 +8,10 @@
 
 .slider__image {
 
+  &--after {
+    display: none;
+  }
+
 }
 
 .slider__toggle {

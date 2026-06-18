@@ -1,15 +1,16 @@
 .hero {
   font-family: $font-secondary;
   color: $color-white;
-  background-color: rgba($color-green-500, 85%);
+  background-color: rgba($color-green-alternate, 85%);
 }
 
 .hero__title {
-  @include title();
   text-align: center;
+  color: $color-white;
 }
 
 .hero__slogan {
+  margin: 0;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;

@@ -1,7 +1,7 @@
 .product-card {
   font-size: 12px;
   line-height: 16px;
-  color: $color-grey-700;
+  color: $color-text-primary;
 }
 
 .product-card__image-link {
@@ -17,15 +17,13 @@
 }
 
 .product-card__title {
-  font-family: $font-secondary;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   text-transform: uppercase;
-  color: $color-grey-900;
+  color: $color-text-secondary;
 
   &--more {
-    color: $color-grey-950;
+    color: $color-text-accent;
   }
 }
 
@@ -47,7 +45,11 @@
 }
 
 .product-card__value {
+  margin: 0;
+}
 
+.product-card__text {
+  margin: 0;
 }
 
 .product-card__button {
