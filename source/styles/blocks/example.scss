@@ -1,0 +1,33 @@
+.example {
+  background-color: $color-background-alternate;
+}
+
+.example__body {
+
+}
+
+.example__title {
+  line-height: 40px;
+}
+
+.example__description {
+  margin: 0;
+  color: $color-text-primary;
+}
+
+.example__stats {
+  margin: 0;
+}
+
+.example__stats-charges {
+  margin: 0;
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example__slider {
+
+}

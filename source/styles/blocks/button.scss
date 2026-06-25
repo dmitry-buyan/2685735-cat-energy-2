@@ -1,0 +1,25 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+
+  &--primary {
+    padding: 10px 20px;
+    color: $color-white;
+    background-color: $color-green-alternate;
+  }
+
+  &--secondary {
+    padding: 10px 20px;
+    color: $color-text-primary;
+    background-color: $color-background;
+  }
+}
