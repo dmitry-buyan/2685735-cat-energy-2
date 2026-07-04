@@ -14,9 +14,14 @@
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper container">
-        <a class="header__logo" href="#">
-          <img class="header__logo-image" src="#" width="33" height="38" alt="Логотип Cat Energy">
-          <img class="header__logo-text" src="#" width="101" height="20" alt="Логотип Cat Energy">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="70" height="59">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="60" height="50">
+            <img class="header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          </picture>
+
+          <img class="header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
         </a>
 
         <button class="header__toggle button-reset" type="button">
@@ -291,7 +296,6 @@
           </li>
         </ul>
         <div class="additional__offer special-offer">
-          <img class="special-offer__image" src="#" width="78" height="80" alt="Иконка подарка">
           <h2 class="visually-hidden">Специальное предложение</h2>
           <p class="special-offer__description">
             Закажите все и получите чехол для кота в подарок!
@@ -332,28 +336,28 @@
       <div class="container">
         <div class="footer__logo-wrapper">
           <a class="footer__logo" href="#">
-            <img class="footer__logo-image" src="#" width="128" height="24" alt="Логотип Cat Energy">
+            <img class="footer__logo-image" src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">
           </a>
         </div>
         <ul class="footer__social social list-reset">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--vkontakte" href="#">
               <span class="visually-hidden">VKontakte</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--youtube" href="#">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--telegram" href="#">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
         </ul>
         <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">Разработан HTML Academy</span>
+          <span class="footer__copyright-text">HTML Academy</span>
         </a>
       </div>
     </footer>

@@ -1,5 +1,16 @@
 .program {
   background-color: $color-background;
+  background-repeat: no-repeat;
+
+  &--slim {
+    background-image: url("../../icons/stack.svg#cat-back-slim");
+    background-size: 50px 53px;
+  }
+
+  &--pro {
+    background-image: url("../../icons/stack.svg#cat-back-pro");
+    background-size: 67px 50px;
+  }
 }
 
 .program__title {
@@ -21,4 +32,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $color-black;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 12px;
+    background-color: $color-black;
+    mask-image: url("../../icons/icon-arrow.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
 }

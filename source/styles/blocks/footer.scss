@@ -1,23 +1,21 @@
-.footer {
-
-}
-
-.footer__logo-wrapper {
-
-}
-
-.footer__logo {
-
-}
-
-.footer__logo-image {
-
-}
-
-.footer__social {
-
-}
-
 .footer__copyright {
+  color: inherit;
+  font-size: 16px;
+  line-height: 20px;
 
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-color: $color-background-accent;
+    mask-image: url("../../icons/stack.svg#html-academy-logo");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
+
+.footer__copyright-text {
+  color: inherit;
 }
