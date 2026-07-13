@@ -24,11 +24,11 @@
           <img class="header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
         </a>
 
-        <button class="header__toggle button-reset" type="button">
+        <button class="header__toggle header__toggle--open button-reset" type="button">
           <span class="visually-hidden">Переключить меню</span>
         </button>
 
-        <nav class="header__nav main-nav">
+        <nav class="header__nav main-nav main-nav--nojs">
           <ul class="main-nav__list list-reset">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
@@ -46,14 +46,18 @@
 
     <main class="main">
       <section class="hero">
-        <div class="container">
+        <div class="hero__header">
           <h1 class="hero__title title">Функциональное питание для котов</h1>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
+        </div>
+        <div class="hero__product container">
           <picture>
             <source media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x" type="image/png" width="552" height="449">
             <source media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" type="image/png" width="709" height="609">
             <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Одноразовый стакан с питанием для котов">
           </picture>
+        </div>
+        <div class="hero__button-wrapper container">
           <a class="hero__button button button--primary" href="#">
             Подобрать программу
           </a>
@@ -64,25 +68,29 @@
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="programs__list list-reset">
           <li class="programs__item program program--slim">
-            <h3 class="program__title title">Похудение</h3>
-            <p class="program__content">
-              Ваш кот весит больше собаки и почти утратил способность лазить по
-              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
-              сбросить лишний вес.
-            </p>
-            <a class="program__link" href="#">
-              Каталог slim
-            </a>
+            <div class="program__wrapper">
+              <h3 class="program__title title">Похудение</h3>
+              <p class="program__content">
+                Ваш кот весит больше собаки и почти утратил способность лазить по
+                деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
+                сбросить лишний вес.
+              </p>
+              <a class="program__link" href="#">
+                Каталог slim
+              </a>
+            </div>
           </li>
           <li class="programs__item program program--pro">
-            <h3 class="program__title title">Набор массы</h3>
-            <p class="program__content">
-              Заработать авторитет среди дворовых котов и даже собак? Серия Cat
-              Energy Pro поможет вашему коту нарастить необходимые мышцы!
-            </p>
-            <a class="program__link" href="#">
-              Каталог pro
-            </a>
+            <div class="program__wrapper">
+              <h3 class="program__title title">Набор массы</h3>
+              <p class="program__content">
+                Заработать авторитет среди дворовых котов и даже собак? Серия Cat
+                Energy Pro поможет вашему коту нарастить необходимые мышцы!
+              </p>
+              <a class="program__link" href="#">
+                Каталог pro
+              </a>
+            </div>
           </li>
         </ul>
       </section>
@@ -122,36 +130,40 @@
             этом он не менял своих привычек и по-прежнему спит по 16 часов в
             день.
           </p>
-          <dl class="example__stats stats">
-            <div class="stats__item">
-              <dt class="stats__term">
-                <span class="stats__term-text">Снижение веса</span>
-              </dt>
-              <dd class="stats__definition">5 кг</dd>
-            </div>
-            <div class="stats__item">
-              <dt class="stats__term">
-                <span class="stats__term-text">Затрачено времени</span>
-              </dt>
-              <dd class="stats__definition">60 дней</dd>
-            </div>
-          </dl>
-          <p class="example__stats-charges">Затраты на питание: <span>15 000 руб.</span>
-          </p>
+          <div class="example__statistics statistics">
+            <dl class="statistics__list list-reset">
+              <div class="statistics__item">
+                <dt class="statistics__term">
+                  <span class="statistics__term-text">Снижение веса</span>
+                </dt>
+                <dd class="statistics__definition">5 кг</dd>
+              </div>
+              <div class="statistics__item">
+                <dt class="statistics__term">
+                  <span class="statistics__term-text">Затрачено времени</span>
+                </dt>
+                <dd class="statistics__definition">60 дней</dd>
+              </div>
+            </dl>
+            <p class="statistics-charges">Затраты на питание: <span class="statistics__price">15 000 руб.</span>
+            </p>
+          </div>
         </div>
-        <div class="example__slider slider container">
-          <div class="slider__images">
-            <picture>
-              <source media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" type="image/png" width="560" height="512">
-              <img class="slider__image slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до похудения">
-            </picture>
-            <picture>
-              <source media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" type="image/png" width="560" height="512">
-              <img class="slider__image slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после похудения">
-            </picture>
-            <button class="slider__toggle button-reset" type="button">
-              <span class="visually-hidden">Сравнить до и после</span>
-            </button>
+        <div class="example__slider slider">
+          <div class="example__container container">
+            <div class="slider__images">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" type="image/png" width="560" height="512">
+                <img class="slider__image slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+              </picture>
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" type="image/png" width="560" height="512">
+                <img class="slider__image slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после похудения">
+              </picture>
+              <button class="slider__toggle button-reset" type="button">
+                <span class="visually-hidden">Сравнить до и после</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -173,7 +185,7 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container container">
         <div class="footer__logo-wrapper">
           <a class="footer__logo" href="#">
             <img class="footer__logo-image" src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">

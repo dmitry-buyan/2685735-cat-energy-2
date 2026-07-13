@@ -2,15 +2,53 @@
   background-color: $color-background;
 }
 
+.contacts__cooperation {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 26px;
+
+  @media (min-width: $tablet-width) {
+    width: 628px;
+    padding-block: 60px;
+  }
+}
+
 .contacts__title {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: $color-text-accent;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
   line-height: 20px;
   font-style: normal;
   color: $color-text-primary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.contacts__map iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  outline: none;
+  background-image: url("../../images/map-background-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/map-background-mobile@2x.png");
+  }
 }

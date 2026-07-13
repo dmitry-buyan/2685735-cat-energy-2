@@ -1,25 +1,50 @@
 .example {
+  padding-block: 25px 40px;
   background-color: $color-background-alternate;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 45px 0;
+    background-color: $color-white;
+  }
 }
 
 .example__title {
+  margin-bottom: 40px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .example__description {
-  margin: 0;
+  margin-block: 0 20px;
   color: $color-text-primary;
+
+  @media (min-width: $tablet-width) {
+    margin-block: 0 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-.example__stats {
-  margin: 0;
+.example__statistics {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 254px;
+  }
 }
 
-.example__stats-charges {
-  margin: 0;
-  font-family: $font-secondary;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
+.example__slider {
+  @media (min-width: $tablet-width) {
+    height: 462px;
+    background-color: $color-background-alternate;
+  }
+}
+
+.example__container {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -150px;
+  }
 }

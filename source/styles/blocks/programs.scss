@@ -1,0 +1,23 @@
+.programs {
+  padding-block: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 0 25px;
+  }
+}
+
+.programs__item {
+  padding: 21px 20px 18px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 63px 53px 52px;
+  }
+}

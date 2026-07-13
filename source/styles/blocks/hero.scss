@@ -1,12 +1,54 @@
 .hero {
+  padding-block: 7px 10px;
   font-family: $font-secondary;
   color: $color-white;
-  background-color: rgba($color-green-alternate, 85%);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    color: $color-black;
+  }
+}
+
+.hero__header {
+  padding-block: 27px 164px;
+  background-color: rgba($color-green-basic, 0.85);
+  background-image:
+    linear-gradient(rgba($color-green-basic, 0.85)),
+    url("../../images/cat-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(rgba($color-green-basic, 0.85)),
+      url("../../images/cat-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    margin-inline: auto;
+    padding-inline: 120px;
+    padding-block: 40px 50px;
+    background: none;
+  }
 }
 
 .hero__title {
+  max-width: $mobile-width;
+  margin-inline: auto;
+  margin-bottom: 25px;
   text-align: center;
-  color: $color-white;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
 }
 
 .hero__slogan {
@@ -15,4 +57,44 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+.hero__product {
+  margin-top: -135px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-top: -75px;
+    order: 3;
+    z-index: -1;
+  }
+}
+
+.hero__button-wrapper {
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    margin-inline: auto;
+    padding-inline: 120px;
+    order: 2;
+  }
+}
+
+.hero__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-width: 245px;
+    width: max-content;
+    padding: 14px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

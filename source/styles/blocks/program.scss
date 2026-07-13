@@ -1,31 +1,84 @@
 .program {
   background-color: $color-background;
   background-repeat: no-repeat;
+  background-position: 20px 20px;
 
   &--slim {
     background-image: url("../../icons/stack.svg#cat-back-slim");
     background-size: 50px 53px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 445px 81px;
+      background-size: 200px 211px;
+    }
   }
 
   &--pro {
     background-image: url("../../icons/stack.svg#cat-back-pro");
     background-size: 67px 50px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 411px 91px;
+      background-size: 268px 200px;
+    }
+  }
+}
+
+.program__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 340px;
   }
 }
 
 .program__title {
+  margin-left: 70px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .program__content {
   margin: 0;
   font-family: $font-primary;
   color: $color-text-primary;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 23px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 48px;
+      padding-bottom: 0;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: $border-main;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .program__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 15px;
   font-family: $font-secondary;
   font-size: 16px;
   line-height: 16px;
@@ -33,11 +86,17 @@
   text-decoration: none;
   color: $color-black;
 
+  @media (min-width: $tablet-width) {
+    column-gap: 25px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &::after {
     content: "";
     display: inline-block;
     width: 24px;
-    height: 12px;
+    aspect-ratio: 0.8;
     background-color: $color-black;
     mask-image: url("../../icons/icon-arrow.svg");
     mask-repeat: no-repeat;

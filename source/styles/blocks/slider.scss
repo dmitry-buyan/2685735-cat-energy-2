@@ -1,8 +1,11 @@
 .slider__images {
   position: relative;
+  display: flex;
 }
 
 .slider__image {
+  display: block;
+
   &--after {
     display: none;
   }
