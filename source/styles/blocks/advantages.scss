@@ -5,6 +5,11 @@
     padding-block: 20px 105px;
     border-bottom: $border-section;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 35px 34px;
+    border-bottom: none;
+  }
 }
 
 .advantages__title {
@@ -23,13 +28,19 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
-    gap: 37px 135px;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 40px 80px;
   }
 }
 
 .advantages__item {
   display: flex;
+  align-items: flex-start;
   column-gap: 20px;
 
   &::before {

@@ -1,5 +1,20 @@
 .contacts {
-  background-color: $color-background;
+  position: relative;
+  background-color: $color-white;
+}
+
+.contacts__wrapper {
+  padding-block-end: 362px;
+
+  @media (min-width: $tablet-width) {
+    padding-block-end: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+  }
 }
 
 .contacts__cooperation {
@@ -8,8 +23,16 @@
   padding-block: 26px;
 
   @media (min-width: $tablet-width) {
-    width: 628px;
     padding-block: 60px;
+    padding-inline: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    width: 565px;
+    background-color: $color-white;
+    z-index: 1;
   }
 }
 
@@ -37,6 +60,13 @@
   }
 }
 
+.contacts__map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .contacts__map iframe {
   display: block;
   width: 100%;
@@ -50,5 +80,9 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../images/map-background-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
   }
 }

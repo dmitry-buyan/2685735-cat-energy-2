@@ -4,10 +4,22 @@
   @media (min-width: $tablet-width) {
     padding-block: 0 25px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 82px 36px;
+  }
+}
+
+.programs__list {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 245px);
+    gap: 40px 80px;
+  }
 }
 
 .programs__item {
-  padding: 21px 20px 18px;
+  padding: 30px 20px 18px;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -15,9 +27,20 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 30px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    padding: 77px 63px 53px 52px;
+    padding-block: 77px 53px;
+    padding-inline: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 2;
+    padding-block: 77px 55px;
+    padding-inline: 52px;
   }
 }

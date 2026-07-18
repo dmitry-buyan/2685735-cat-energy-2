@@ -49,6 +49,10 @@
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid $color-green-basic;
     }
+
+    @media (min-width: $desktop-width) {
+      border-bottom-color: $color-white;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -56,5 +60,11 @@
     font-size: 18px;
     line-height: 24px;
     border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-white;
   }
 }

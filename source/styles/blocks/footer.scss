@@ -8,6 +8,8 @@
 }
 
 .footer__container {
+  text-align: center;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -17,7 +19,6 @@
 
 .footer__logo-wrapper {
   margin-bottom: 20px;
-  text-align: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -25,7 +26,16 @@
 }
 
 .footer__logo {
-  display: inline-block;
+  display: inline-flex;
+  padding-block-end: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-block-end: 0;
+  }
+}
+
+.footer__logo-image {
+  display: block;
 }
 
 .footer__social {
