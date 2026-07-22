@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  padding-block: 13px 7px;
+  padding-block: 13px 15px;
 
   @media (min-width: $tablet-width) {
     padding-block: 25px;
@@ -104,6 +104,8 @@
 
     &--close + .header__nav {
       display: block;
+      background-color: $color-white;
+      z-index: 2;
     }
   }
 

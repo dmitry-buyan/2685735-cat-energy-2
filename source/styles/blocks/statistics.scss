@@ -23,7 +23,7 @@
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  border: 1px solid #cdcdcd;
+  border: $border-optional;
   border-radius: 3px;
 
   @media (min-width: $tablet-width) {

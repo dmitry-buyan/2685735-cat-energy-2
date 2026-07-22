@@ -1,14 +1,89 @@
 .subscription {
+  padding-block: 20px 40px;
   font-family: $font-secondary;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 40px 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 48px 104px;
+  }
 }
 
 .subscription__title {
+  margin-block-end: 32px;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-block-end: 66px;
+    padding-inline: 40px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-block-end: 72px;
+    padding-inline-start: 0;
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .subscription__description {
-  margin: 0;
+  max-width: 635px;
+  margin-block: 0 24px;
+  margin-inline: auto;
   font-size: 16px;
+  text-align: center;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+  }
+}
+
+.subscription__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-inline: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+}
+
+.subscription__label {
+  flex-basis: 100%;
+}
+
+.subscription__email-field {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+}
+
+.subscription__button {
+  @media (min-width: $tablet-width) {
+    flex-basis: 256px;
+    flex-shrink: 0;
+    padding: 15px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
