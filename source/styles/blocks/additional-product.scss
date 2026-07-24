@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 13px 10px;
   padding-block: 13px 19px;
-  line-height: 14px;
+  line-height: 1;
   border-bottom: $border-optional;
 
   &:last-child {
@@ -34,7 +34,7 @@
     justify-content: flex-end;
     column-gap: 50px;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.25;
   }
 
   @media (min-width: $desktop-width) {
@@ -45,13 +45,12 @@
 
 .additional-product__title {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   text-transform: uppercase;
   color: $color-text-secondary;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 20px;
   }
 }
 

@@ -43,7 +43,7 @@
 
   @media (min-width: $tablet-width) {
     padding-block-end: 0;
-    margin-block-end: 84px;
+    margin-block-end: 154px;
   }
 }
 
@@ -51,12 +51,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 141px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 245px);
-    gap: 63px 80px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 144px 80px;
   }
 }
 

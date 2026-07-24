@@ -9,6 +9,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 302px;
     background-image:
@@ -20,7 +21,6 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100%, cover;
-    z-index: 0;
 
     @media (min-resolution: 2dppx) {
       background-image:
@@ -49,14 +49,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-block: 224px 0;
+    padding-block: 224px 184px;
   }
 }
 
 .hero__wrapper {
-  position: relative;
-  z-index: 1;
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
@@ -90,7 +87,6 @@
     margin-inline: 0;
     margin-block-end: 40px;
     font-size: 60px;
-    line-height: 60px;
     text-align: left;
   }
 }
@@ -98,7 +94,7 @@
 .hero__slogan {
   margin-block: 0 29px;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1;
   text-transform: uppercase;
   text-align: center;
   color: inherit;
@@ -106,7 +102,6 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     font-size: 20px;
-    line-height: 20px;
     text-align: left;
   }
 }
@@ -120,12 +115,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
-    top: -105px;
-    left: 100px;
-    align-self: center;
-    margin-block-start: -265px;
-    z-index: -2;
+    position: absolute;
+    left: calc(50% - 175px);
+    bottom: 52px;
+    z-index: 2;
   }
 }
 
@@ -144,7 +137,7 @@
     margin-inline-start: 90px;
     padding: 14px;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 1.3;
   }
 
   @media (min-width: $desktop-width) {

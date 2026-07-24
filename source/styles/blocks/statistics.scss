@@ -34,10 +34,10 @@
 
 .statistics__term {
   position: absolute;
-  bottom: -21px;
+  bottom: -24px;
   width: 80px;
   padding: 5px;
-  line-height: 0;
+  line-height: 1;
   text-align: center;
   background-color: $color-background-alternate;
 
@@ -48,18 +48,21 @@
     padding-inline: 9px;
     background-color: $color-white;
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-background;
+  }
 }
 
 .statistics__term-text {
   font-size: 12px;
-  line-height: 12px;
+  line-height: 1;
   text-transform: lowercase;
   text-align: center;
   color: $color-text-primary;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
-    line-height: 14px;
   }
 }
 
@@ -67,13 +70,13 @@
   margin: 0;
   font-family: $font-secondary;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   text-transform: uppercase;
   color: $color-black;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
-    line-height: 37px;
+    line-height: 1.23;
   }
 }
 
@@ -81,7 +84,7 @@
   margin-block: 0 20px;
   font-family: $font-secondary;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.43;
   text-align: center;
   text-transform: uppercase;
   color: $color-black;

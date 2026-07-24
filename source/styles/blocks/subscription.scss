@@ -1,7 +1,7 @@
 .subscription {
   padding-block: 20px 40px;
   font-family: $font-secondary;
-  line-height: 24px;
+  line-height: 1.5;
 
   @media (min-width: $tablet-width) {
     padding-block: 40px 80px;
@@ -15,20 +15,17 @@
 .subscription__title {
   margin-block-end: 32px;
   font-size: 24px;
-  line-height: 24px;
 
   @media (min-width: $tablet-width) {
     margin-block-end: 66px;
     padding-inline: 40px;
     font-size: 32px;
-    line-height: 32px;
   }
 
   @media (min-width: $desktop-width) {
     margin-block-end: 72px;
     padding-inline-start: 0;
     font-size: 40px;
-    line-height: 40px;
   }
 }
 
@@ -42,7 +39,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 1.33;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,6 +81,6 @@
     flex-shrink: 0;
     padding: 15px;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 1.3;
   }
 }
