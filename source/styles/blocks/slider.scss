@@ -1,8 +1,27 @@
 .slider__images {
   position: relative;
+  margin-inline: auto;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -150px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: initial;
+    width: 100%;
+    padding-inline: 0;
+  }
 }
 
 .slider__image {
+  display: block;
+
   &--after {
     display: none;
   }
@@ -10,6 +29,7 @@
 
 .slider__toggle {
   position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 4px;
