@@ -14,22 +14,20 @@
   <body class="catalog__body">
     <header class="header">
       <div class="header__wrapper container">
-        <a class="header__logo-primary" href="index.html">
+        <a class="header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="70" height="59">
             <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="60" height="50">
-            <img class="header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+            <img class="header__logo-primary" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
           </picture>
-
+          <img class="header__logo-secondary" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
         </a>
-        <a class="header__logo-secondary" href="index.html" >
-          <img class="header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
-        </a>
-        <button class="header__toggle header__toggle--open button-reset" type="button">
-          <span class="visually-hidden">Переключить меню</span>
-        </button>
 
-        <nav class="header__nav main-nav main-nav--nojs">
+        <nav class="header__navigation main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle button-reset" type="button">
+            <span class="visually-hidden">Переключить меню</span>
+          </button>
+
           <ul class="main-nav__list list-reset">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -60,8 +58,9 @@
               <div class="product-card__info">
                 <h2 class="product-card__title title">
                   <a class="product-card__title-link" href="#">
-                    Cat Energy
-                    <span class="product-card__weight">Pro 500 г</span>
+                    <span class="product-card__title-name">Cat Energy</span>
+                    <span class="product-card__title-series">Pro</span>
+                    <span class="product-card__title-weight">500 г</span>
                   </a>
                 </h2>
                 <dl class="product-card__specs">
@@ -92,8 +91,9 @@
               <div class="product-card__info">
                 <h2 class="product-card__title title">
                   <a class="product-card__title-link" href="#">
-                    Cat Energy
-                    <span class="product-card__weight">Pro 1000 г</span>
+                    <span class="product-card__title-name">Cat Energy</span>
+                    <span class="product-card__title-series">Pro</span>
+                    <span class="product-card__title-weight">1000 г</span>
                   </a>
                 </h2>
                 <dl class="product-card__specs">
@@ -123,8 +123,9 @@
               <div class="product-card__info">
                 <h2 class="product-card__title title">
                   <a class="product-card__title-link" href="#">
-                    Cat Energy
-                    <span class="product-card__weight">Pro 500 г</span>
+                    <span class="product-card__title-name">Cat Energy</span>
+                    <span class="product-card__title-series">Pro</span>
+                    <span class="product-card__title-weight">500 г</span>
                   </a>
                 </h2>
                 <dl class="product-card__specs">
@@ -155,8 +156,9 @@
               <div class="product-card__info">
                 <h2 class="product-card__title title">
                   <a class="product-card__title-link" href="#">
-                    Cat Energy
-                    <span class="product-card__weight">Pro 1000 г</span>
+                    <span class="product-card__title-name">Cat Energy</span>
+                    <span class="product-card__title-series">Pro</span>
+                    <span class="product-card__title-weight">1000 г</span>
                   </a>
                 </h2>
                 <dl class="product-card__specs">
@@ -186,8 +188,9 @@
               <div class="product-card__info">
                 <h2 class="product-card__title title">
                   <a class="product-card__title-link" href="#">
-                    Cat Energy
-                    <span class="product-card__weight">Slim 500 г</span>
+                    <span class="product-card__title-name">Cat Energy</span>
+                    <span class="product-card__title-series">Slim</span>
+                    <span class="product-card__title-weight">500 г</span>
                   </a>
                 </h2>
                 <dl class="product-card__specs">
@@ -218,8 +221,9 @@
               <div class="product-card__info">
                 <h2 class="product-card__title title">
                   <a class="product-card__title-link" href="#">
-                    Cat Energy
-                    <span class="product-card__weight">Slim 1000 г</span>
+                    <span class="product-card__title-name">Cat Energy</span>
+                    <span class="product-card__title-series">Slim</span>
+                    <span class="product-card__title-weight">1000 г</span>
                   </a>
                 </h2>
                 <dl class="product-card__specs">
@@ -249,8 +253,9 @@
               <div class="product-card__info">
                 <h2 class="product-card__title title">
                   <a class="product-card__title-link" href="#">
-                    Cat Energy
-                    <span class="product-card__weight">Slim 500 г</span>
+                    <span class="product-card__title-name">Cat Energy</span>
+                    <span class="product-card__title-series">Slim</span>
+                    <span class="product-card__title-weight">500 г</span>
                   </a>
                 </h2>
                 <dl class="product-card__specs">
@@ -297,7 +302,7 @@
               <h3 class="additional-product__title title">Питьевая вода</h3>
               <div class="additional-product__wrapper">
                 <p class="additional-product__description">5 литров</p>
-                <p class="additional-product__price">50 ₽</p>
+                <p class="additional-product__price">500 ₽</p>
               </div>
               <a class="additional-product__button button button--primary" href="#">Заказать</a>
             </li>
@@ -363,8 +368,9 @@
 
     <footer class="footer">
       <div class="footer__container container">
-        <a class="footer__logo" href="#">
-          <img class="footer__logo-image" src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">
+        <a class="footer__logo" href="index.html">
+          <span class="footer__logo-image" aria-hidden="true"></span>
+          <span class="visually-hidden">Логотип Cat Energy</span>
         </a>
         <ul class="footer__social social list-reset">
           <li class="social__item">

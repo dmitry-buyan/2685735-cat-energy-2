@@ -10,16 +10,32 @@
   text-decoration: none;
   border: none;
   border-radius: 0;
+  transition: all 0.2s ease;
 
   &--primary {
     padding: 10px 20px;
     color: $color-white;
-    background-color: $color-green-alternate;
+    background-color: $color-green-basic;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-green-alternate;
+    }
+
+    &:active {
+      color: rgba($color-white, 0.3);
+      background-color: $color-green-alternate;
+    }
   }
 
   &--secondary {
     padding: 10px 20px;
     color: $color-text-primary;
     background-color: $color-background;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $border-card;
+    }
   }
 }

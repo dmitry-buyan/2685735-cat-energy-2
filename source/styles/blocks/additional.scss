@@ -1,11 +1,12 @@
 .additional {
   padding-block: 13px 20px;
+  overflow-x: hidden;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-block: 34px 40px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-block: 35px 48px;
   }
 }
@@ -19,13 +20,43 @@
 }
 
 .additional__title {
+  position: relative;
+  width: fit-content;
   margin-block-end: 36px;
   font-size: 24px;
   line-height: 1;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: $color-green-basic;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    right: calc(100% + 20px);
+
+    @media (min-width: $tablet-width) {
+      right: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: calc(100% + 40px);
+    }
+  }
+
+  &::after {
+    left: calc(100% + 40px);
+  }
+
   @media (min-width: $tablet-width) {
     margin-block-end: 80px;
-    padding-inline: 40px;
+    padding-inline-start: 40px;
     font-size: 32px;
   }
 
@@ -44,7 +75,6 @@
 
   @media (min-width: $tablet-width) {
     margin-block-end: 70px;
-    padding-inline: 38px;
     border: $border-optional;
   }
 

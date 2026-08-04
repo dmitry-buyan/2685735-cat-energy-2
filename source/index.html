@@ -14,22 +14,20 @@
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper container">
-        <a class="header__logo-primary" href="#">
+        <a class="header__logo" href="#">
           <picture>
             <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="70" height="59">
             <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="60" height="50">
-            <img class="header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+            <img class="header__logo-primary" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
           </picture>
-
+          <img class="header__logo-secondary" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
         </a>
-        <a class="header__logo-secondary" href="#" >
-          <img class="header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat Energy">
-        </a>
-        <button class="header__toggle header__toggle--open button-reset" type="button">
-          <span class="visually-hidden">Переключить меню</span>
-        </button>
 
-        <nav class="header__nav main-nav main-nav--nojs">
+        <nav class="header__navigation main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle button-reset" type="button">
+            <span class="visually-hidden">Переключить меню</span>
+          </button>
+
           <ul class="main-nav__list list-reset">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
@@ -54,7 +52,7 @@
           </div>
           <div class="hero__product">
             <picture>
-              <source media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x" type="image/png" width="552" height="449">
+              <source media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x" type="image/png" width="552" height="499">
               <source media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" type="image/png" width="709" height="609">
               <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Одноразовый стакан с питанием для котов">
             </picture>
@@ -151,19 +149,22 @@
           </div>
 
           <div class="example__slider slider">
-            <div class="slider__images">
+            <div class="slider__picture slider__picture--before">
               <picture>
                 <source media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" type="image/png" width="560" height="512">
-                <img class="slider__image slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+                <img class="slider__image" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до похудения">
               </picture>
+            </div>
+            <div class="slider__picture slider__picture--after">
               <picture>
                 <source media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" type="image/png" width="560" height="512">
-                <img class="slider__image slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после похудения">
+                <img class="slider__image" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после похудения">
               </picture>
-              <button class="slider__toggle button-reset" type="button">
-                <span class="visually-hidden">Сравнить до и после</span>
-              </button>
             </div>
+
+            <button class="slider__toggle button-reset" type="button">
+              <span class="visually-hidden">Сравнить до и после</span>
+            </button>
           </div>
         </div>
       </section>
@@ -189,7 +190,8 @@
     <footer class="footer">
       <div class="footer__container container">
         <a class="footer__logo" href="#">
-          <img class="footer__logo-image" src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">
+          <span class="footer__logo-image" aria-hidden="true"></span>
+          <span class="visually-hidden">Логотип Cat Energy</span>
         </a>
         <ul class="footer__social social list-reset">
           <li class="social__item">

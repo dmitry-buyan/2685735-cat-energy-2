@@ -17,30 +17,3 @@
     gap: 40px 80px;
   }
 }
-
-.programs__item {
-  padding: 30px 20px 18px;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-block: 77px 53px;
-    padding-inline: 52px;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: span 2;
-    padding-block: 77px 55px;
-    padding-inline: 52px;
-  }
-}
