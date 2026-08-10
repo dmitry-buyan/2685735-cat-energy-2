@@ -1,6 +1,6 @@
 .slider {
-  position: relative;
   display: grid;
+  position: relative;
   aspect-ratio: 280 / 256;
   overflow: hidden;
 
@@ -12,16 +12,14 @@
 .slider__picture {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  overflow: hidden;
 
   &--before {
-    width: 50%;
     z-index: 1;
+    clip-path: inset(0 50% 0 0);
   }
 
   &--after {
-    display: block;
-    justify-self: end;
+    clip-path: inset(0 0 0 50%);
 
     picture {
       margin-left: auto;
@@ -41,8 +39,8 @@
 .slider__image {
   display: block;
   width: 280px;
-  height: auto;
   max-width: none;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     width: 560px;
@@ -51,29 +49,45 @@
 
 .slider__toggle {
   position: absolute;
-  z-index: 2;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background-color: $color-background-accent;
-  border-radius: 2px;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background-color: $color-white;
+  color: $color-background-accent;
   cursor: pointer;
   transition: all 0.2s ease;
+  isolation: isolate;
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: -1;
     transform: translate(-50%, -50%);
-    width: 40px;
-    aspect-ratio: 1;
-    background-color: $color-white;
-    border: 2px solid $color-background-accent;
-    border-radius: 50%;
+    width: 4px;
+    height: 256px;
+    border-radius: 2px;
+    background-image:
+      linear-gradient(
+        to bottom,
+        currentColor 0%,
+        currentColor calc(50% - 20px),
+        transparent calc(50% - 20px),
+        transparent calc(50% + 20px),
+        currentColor calc(50% + 20px),
+        currentColor 100%
+      );
     transition: all 0.2s ease;
+
+    @media (min-width: $tablet-width) {
+      height: 512px;
+    }
   }
 
   &::after {
@@ -84,7 +98,7 @@
     transform: translate(-50%, -50%);
     width: 24px;
     height: 18px;
-    background-color: $color-background-accent;
+    background-color: currentColor;
     mask-image: url("../../icons/slider-arrows.svg");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -94,22 +108,18 @@
 
   &:hover,
   &:focus-visible {
-    background-color: $color-green-basic;
-
-    &::before {
-      border-color: $color-green-basic;
-    }
+    color: $color-green-basic;
 
     &::after {
-      background-color: inherit;
+      background-color: $color-green-basic;
     }
   }
 
   &:active {
-    background-color: rgba($color-green-alternate, 0.6);
+    color: rgba($color-green-alternate, 0.6);
 
-    &::before {
-      border-color: rgba($color-green-alternate, 0.6);
+    &::after {
+      background-color: rgba($color-green-alternate, 0.6);
     }
   }
 }

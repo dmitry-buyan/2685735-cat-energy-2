@@ -99,8 +99,9 @@
 
   @media (min-width: $desktop-width) {
     grid-column: span 2;
-    align-self: end;
-    margin-inline-start: auto;
+    align-self: start;
+    margin-block-start: 5px;
+    margin-inline-start: 10px;
     padding-inline: 0;
   }
 }
