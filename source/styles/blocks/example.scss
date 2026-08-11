@@ -3,7 +3,7 @@
   background-color: $color-background-alternate;
 
   @media (min-width: $tablet-width) {
-    padding-block: 45px 0;
+    padding-block: 42px 100px;
     background-color: $color-white;
     background-image:
       linear-gradient(
@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-block: 35px 75px;
+    padding-block: 0 70px;
     background-image:
       linear-gradient(
         to top,
@@ -35,8 +35,15 @@
 }
 
 .example__content {
+  margin-block-end: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-block-end: 103px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: span 2;
+    margin-block-end: 0;
   }
 }
 
@@ -45,11 +52,11 @@
   line-height: 1.12;
 
   @media (min-width: $tablet-width) {
-    margin-block-end: 60px;
+    margin-block-end: 56px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-block-end: 146px;
+    margin-block-end: 142px;
   }
 }
 
@@ -73,7 +80,6 @@
 .example__statistics {
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-bottom: 254px;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,14 +90,18 @@
 }
 
 .example__slider {
+  margin-inline: auto;
+  width: 280px;
+
   @media (min-width: $tablet-width) {
-    position: relative;
-    height: 462px;
-    z-index: 2;
+    width: 560px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: span 2;
-    height: 512px;
+    align-self: start;
+    margin-block-start: 5px;
+    margin-inline-start: 10px;
+    padding-inline: 0;
   }
 }

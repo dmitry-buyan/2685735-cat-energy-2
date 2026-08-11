@@ -1,6 +1,31 @@
 .program {
+  padding-block: 30px 18px;
+  padding-inline: 20px;
   background-color: $color-background;
   background-repeat: no-repeat;
+
+  &:not(:last-child) {
+    margin-block-end: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-block-end: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-block-end: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-block: 77px 61px;
+    padding-inline: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 2;
+    padding-block: 77px 62px;
+    padding-inline: 52px;
+  }
 
   &--slim {
     background-image: url("../../icons/stack.svg#cat-back-slim");
@@ -14,7 +39,7 @@
 
     @media (min-width: $desktop-width) {
       background-position: 52px 41px;
-      background-size: 100px 100px;
+      background-size: 100px 106px;
     }
   }
 
@@ -29,7 +54,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      background-position: 33px 47px;
+      background-position: 34px 47px;
       background-size: 134px 100px;
     }
   }
@@ -62,30 +87,32 @@
 
   @media (min-width: $tablet-width) {
     max-width: min(56%, 600px);
-    margin-block-end: 48px;
+    margin-block-end: 55px;
     padding-block-end: 0;
     font-size: 16px;
     line-height: 1.5;
   }
 
   @media (min-width: $desktop-width) {
-    margin-block-end: 23px;
+    max-width: 100%;
+    margin-block-end: 32px;
   }
 
   &:last-of-type {
     border-bottom: $border-main;
-    padding-block-end: 23px;
+    padding-block-end: 21px;
 
     @media (min-width: $tablet-width) {
       border: none;
+      padding-block: 0;
     }
   }
 }
 
 .program__link {
   display: inline-flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   column-gap: 15px;
   font-family: $font-secondary;
   font-size: 16px;
@@ -102,12 +129,24 @@
   &::after {
     content: "";
     display: inline-block;
-    width: 24px;
-    aspect-ratio: 0.8;
+    width: 32px;
+    height: 10px;
     background-color: $color-black;
     mask-image: url("../../icons/icon-arrow.svg");
     mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: contain;
+    transition: all 0.2s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::after {
+      transform: scaleX(1.2);
+      width: 38px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

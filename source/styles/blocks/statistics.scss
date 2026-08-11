@@ -7,10 +7,11 @@
 
   @media (min-width: $tablet-width) {
     margin-block-end: 0;
+    column-gap: 43px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-block-end: 60px;
+    margin-block-end: 55px;
     column-gap: 42px;
   }
 }
@@ -34,7 +35,7 @@
 
 .statistics__term {
   position: absolute;
-  bottom: -24px;
+  bottom: -22px;
   width: 80px;
   padding: 5px;
   line-height: 1;
@@ -81,7 +82,7 @@
 }
 
 .statistics-charges {
-  margin-block: 0 20px;
+  margin-block: 0;
   font-family: $font-secondary;
   font-size: 14px;
   line-height: 1.43;
@@ -95,7 +96,7 @@
     place-content: flex-end flex-end;
     align-content: flex-start;
     max-width: 180px;
-    margin-block: 0;
+    margin-block: 7px;
     margin-inline-start: auto;
     font-size: 20px;
   }
@@ -103,8 +104,9 @@
   @media (min-width: $desktop-width) {
     flex-wrap: nowrap;
     max-width: 100%;
+    margin-block: 0;
     margin-inline-start: 0;
-    column-gap: 63px;
+    column-gap: 65px;
   }
 }
 

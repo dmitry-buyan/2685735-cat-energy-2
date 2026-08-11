@@ -2,6 +2,7 @@
   padding-block: 20px 40px;
   font-family: $font-secondary;
   line-height: 1.5;
+  overflow-x: hidden;
 
   @media (min-width: $tablet-width) {
     padding-block: 40px 80px;
@@ -13,12 +14,42 @@
 }
 
 .subscription__title {
+  position: relative;
+  width: fit-content;
   margin-block-end: 32px;
   font-size: 24px;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: $color-green-basic;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    right: calc(100% + 20px);
+
+    @media (min-width: $tablet-width) {
+      right: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: calc(100% + 40px);
+    }
+  }
+
+  &::after {
+    left: calc(100% + 40px);
+  }
+
   @media (min-width: $tablet-width) {
     margin-block-end: 66px;
-    padding-inline: 40px;
+    padding-inline-start: 40px;
     font-size: 32px;
   }
 
@@ -44,6 +75,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 100%;
+    margin-block-end: 22px;
   }
 }
 
@@ -76,10 +108,14 @@
 }
 
 .subscription__button {
+  padding-block: 15px;
+  padding-inline: 25px;
+  font-size: 20px;
+  line-height: 26px;
+
   @media (min-width: $tablet-width) {
     flex-basis: 256px;
     flex-shrink: 0;
-    padding: 15px;
     font-size: 20px;
     line-height: 1.3;
   }

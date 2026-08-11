@@ -1,53 +1,93 @@
-.slider__images {
+.slider {
+  display: grid;
   position: relative;
-  margin-inline: auto;
-  width: 280px;
+  aspect-ratio: 280 / 256;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    width: 560px;
+    aspect-ratio: 560 / 512;
+  }
+}
+
+.slider__picture {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+
+  &--before {
+    z-index: 1;
+    clip-path: inset(0 50% 0 0);
   }
 
-  @media (min-width: $tablet-width) {
-    position: relative;
-    top: -150px;
+  &--after {
+    clip-path: inset(0 0 0 50%);
+
+    picture {
+      margin-left: auto;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    position: initial;
-    width: 100%;
-    padding-inline: 0;
+  picture {
+    display: block;
+    width: 280px;
+
+    @media (min-width: $tablet-width) {
+      width: 560px;
+    }
   }
 }
 
 .slider__image {
   display: block;
+  width: 280px;
+  max-width: none;
+  object-fit: cover;
 
-  &--after {
-    display: none;
+  @media (min-width: $tablet-width) {
+    width: 560px;
   }
 }
 
 .slider__toggle {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background-color: $color-background-accent;
-  border-radius: 2px;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background-color: $color-white;
+  color: $color-background-accent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  isolation: isolate;
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: -1;
     transform: translate(-50%, -50%);
-    width: 40px;
-    aspect-ratio: 1;
-    background-color: $color-white;
-    border: 2px solid $color-background-accent;
-    border-radius: 50%;
+    width: 4px;
+    height: 256px;
+    border-radius: 2px;
+    background-image:
+      linear-gradient(
+        to bottom,
+        currentColor 0%,
+        currentColor calc(50% - 20px),
+        transparent calc(50% - 20px),
+        transparent calc(50% + 20px),
+        currentColor calc(50% + 20px),
+        currentColor 100%
+      );
+    transition: all 0.2s ease;
+
+    @media (min-width: $tablet-width) {
+      height: 512px;
+    }
   }
 
   &::after {
@@ -58,10 +98,28 @@
     transform: translate(-50%, -50%);
     width: 24px;
     height: 18px;
-    background-color: $color-background-accent;
+    background-color: currentColor;
     mask-image: url("../../icons/slider-arrows.svg");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 24px 18px;
+    transition: all 0.2s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-green-basic;
+
+    &::after {
+      background-color: $color-green-basic;
+    }
+  }
+
+  &:active {
+    color: rgba($color-green-alternate, 0.6);
+
+    &::after {
+      background-color: rgba($color-green-alternate, 0.6);
+    }
   }
 }
