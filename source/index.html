@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswald/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
@@ -12,7 +14,7 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header" data-test="header">
       <div class="header__wrapper container">
         <a class="header__logo" href="#">
           <picture>
@@ -44,7 +46,7 @@
     </header>
 
     <main class="main">
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <div class="hero__wrapper container">
           <div class="hero__content">
             <h1 class="hero__title title">Функциональное питание для котов</h1>
@@ -52,16 +54,20 @@
           </div>
           <div class="hero__product">
             <picture>
+              <source media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x" type="image/webp" width="552" height="499">
+              <source media="(min-width: 768px)" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x" type="image/webp" width="709" height="609">
+              <source srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x" type="image/webp" width="280" height="270">
+
               <source media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x" type="image/png" width="552" height="499">
               <source media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" type="image/png" width="709" height="609">
-              <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Одноразовый стакан с питанием для котов">
+              <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" loading="lazy" alt="Одноразовый стакан с питанием для котов">
             </picture>
           </div>
           <a class="hero__button button button--primary" href="program.html">Подобрать программу</a>
         </div>
       </section>
 
-      <section class="programs container">
+      <section class="programs container" data-test="programs">
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="programs__list list-reset">
           <li class="programs__item program program--slim">
@@ -90,7 +96,7 @@
         </ul>
       </section>
 
-      <section class="advantages container">
+      <section class="advantages container" data-test="features">
         <h2 class="advantages__title title">Как это работает</h2>
         <ol class="advantages__list list-reset">
           <li class="advantages__item advantages__item--leaf">
@@ -116,7 +122,7 @@
         </ol>
       </section>
 
-      <section class="example">
+      <section class="example" data-test="proof">
         <div class="example__wrapper container">
           <div class="example__content">
             <h2 class="example__title title">Живой пример</h2>
@@ -151,14 +157,19 @@
           <div class="example__slider slider">
             <div class="slider__picture slider__picture--before">
               <picture>
+                <source media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.webp 1x, images/cat-before-tablet@2x.webp 2x" type="image/webp" width="560" height="512">
+                <source srcset="images/cat-before-mobile@1x.webp 1x, images/cat-before-mobile@2x.webp 2x" type="image/webp" width="280" height="256">
                 <source media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" type="image/png" width="560" height="512">
-                <img class="slider__image" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+                <img class="slider__image" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" loading="lazy" alt="Кот до похудения">
               </picture>
             </div>
             <div class="slider__picture slider__picture--after">
               <picture>
+                <source media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.webp 1x, images/cat-after-tablet@2x.webp 2x" type="image/webp" width="560" height="512">
+                <source srcset="images/cat-after-mobile@1x.webp 1x, images/cat-after-mobile@2x.webp 2x" type="image/webp" width="280" height="256">
+
                 <source media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" type="image/png" width="560" height="512">
-                <img class="slider__image" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после похудения">
+                <img class="slider__image" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" loading="lazy" alt="Кот после похудения">
               </picture>
             </div>
 
@@ -181,7 +192,7 @@
             </address>
           </div>
           <div class="contacts__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1922.129875474221!2d30.314724417908888!3d59.96827599078157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1784797170228!5m2!1sru!2sru" height="362" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1922.129875474221!2d30.314724417908888!3d59.96827599078157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1784797170228!5m2!1sru!2sru" height="362" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Мы на карте"></iframe>
           </div>
         </div>
       </section>
